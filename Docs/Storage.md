@@ -41,7 +41,7 @@ git add .lfsconfig .gitattributes .gitignore OpenWorldMultiLab.uproject Config S
 git lfs status
 git diff --cached --stat
 git commit -m "Describe the actual change"
-git push origin master
+git push origin main
 ```
 
 기존 Git LFS pre-push hook이 실제 객체를 설정된 Gitea 서버에 업로드하고 Git 커밋은 GitHub로 보낸다. 별도의 강제 hook은 추가하지 않았다. `Test-LfsRouting.ps1`은 수동 사전 검사이며 이를 생략한 임의 설정 변경까지 차단하지 않는다.
