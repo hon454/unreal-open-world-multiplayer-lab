@@ -2,9 +2,6 @@
 
 UE5 Third Person 템플릿을 기반으로, Iris Dedicated Server의 동작과 성능을 재현 가능한 실험으로 검증하는 포트폴리오 프로젝트입니다.
 
-> 현재 상태: **TPP C++ 프로젝트 생성 및 루트 배치 완료 / NAS Gitea LFS 구성**.
-> .uproject의 EngineAssociation은 5.8입니다. 아래 네트워크 실험은 구현 계획이며, 게임 빌드·서버 접속·Iris 활성화·성능 개선은 아직 검증하지 않았습니다.
-
 ## 시작하기
 
 1. [프로젝트 시작 가이드](Docs/GettingStarted.md)와 [LFS 복원 절차](Docs/Storage.md)에 따라 프로젝트를 엽니다.
@@ -65,6 +62,10 @@ Unreal 바이너리 자산의 버전과 다운로드가 누적될 때 발생하�
 **검증 결과:** 753개 자산(약 134.4 MiB)을 Gitea에 저장하고, 빈 캐시에서 전부 복원해 크기·SHA-256 일치와 LFS 무결성을 확인했습니다. Git에는 자산 포인터 약 95.2 KiB가 저장됩니다.
 
 [설계 결정·인증·복원·백업 절차](Docs/Storage.md) · [실제 검증 근거](Docs/Results/StorageValidation.md)
+
+## Unreal MCP
+
+에디터 작업에 활용할 수 있도록 Unreal MCP와 All Toolsets를 활성화하고, Codex 연결 설정을 추가했습니다.
 
 ## 버전 관리
 
