@@ -1,11 +1,16 @@
 # 아키텍처
 
-상태: 설계. 구현·실측 결과는 각 작업에서 별도 기록한다.
+상태: 설계. 현재 검증 범위는 PIE다. 검증 절차와 결과는 Docs/Testing 및 Docs/Results에 보관한다.
 
 - [접속 흐름](ConnectionFlow.md): 로컬/EOS 책임 분리와 인증 경계.
 - [복제와 이동](ReplicationAndMovement.md): Iris와 이동·애니메이션 실험 방향.
-- [첫 구현·검증 기준](../Testing/MultiplayerBaseline.md): TPP 서버 1개·클라이언트 2개.
-- [개발 환경](../Environment.md) · [검증 결과](../Results/README.md)
+- [검증 기준](../Testing/MultiplayerBaseline.md) · [개발 환경](../Environment.md) · [검증 결과](../Results/README.md)
+
+## 현재 범위
+
+- PIE 서버 1개·클라이언트 2개에서 각 캐릭터의 소유와 양방향 이동·점프 복제를 확인한다. 현재 미검증이다.
+- 외부 프로세스 실행 스크립트·패키징 검증은 후속 단계로 미룬다.
+- 템플릿 맵은 초기 PIE 확인에 사용한다. 부하·거리별 복제 실험 전에 전용 맵을 구성하며, 구체적인 배치와 World Partition 도입 시점은 미정이다.
 
 ## 후속 테스트 제어 계획
 

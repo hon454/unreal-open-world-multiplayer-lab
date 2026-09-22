@@ -6,7 +6,7 @@ UE5 Third Person 템플릿을 기반으로, Iris Dedicated Server의 동작과 �
 
 1. [프로젝트 시작 가이드](Docs/GettingStarted.md)와 [LFS 복원 절차](Docs/Storage.md)에 따라 프로젝트를 엽니다.
 2. [개발 환경 기록](Docs/Environment.md)에 정확한 엔진 버전과 빌드 환경을 기록합니다.
-3. 첫 목표는 **패키징된 서버 1개 + 실제 클라이언트 2개 + 액터 부하 버튼 + Insights 기록**입니다.
+3. 현재 목표는 **PIE 서버 1개 + 클라이언트 2개의 이동·복제 확인**입니다. 패키징·액터 부하 버튼·Insights 측정은 후속 단계입니다.
 
 로컬 저장소: `G:\unreal-open-world-multiplayer-lab`
 
