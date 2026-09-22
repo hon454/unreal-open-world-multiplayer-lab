@@ -34,6 +34,8 @@ World Partition의 외부 액터·오브젝트 자산도 변경분에 포함한�
 
 ## 다음 구현 순서
 
-Server/Client 타깃 → 패키징된 서버와 실제 클라이언트 2개 접속 → Iris 활성화 검증 → 상시 패널과 [액터 부하 실험](Experiments/01-ActorLoad/README.md).
+첫 기반은 Server/Client 타깃 → PIE 2인 검증 → 패키징된 서버와 실제 클라이언트 2개 접속 → EOS 접속·인증 검증 순으로 진행한다.
+[접속 아키텍처](Architecture/ConnectionFlow.md)와 [구현·검증 기준](Testing/MultiplayerBaseline.md)을 따른다.
+Iris 활성화 검증 결과는 기본 접속 성공과 구분하고, 이후 상시 패널과 [액터 부하 실험](Experiments/01-ActorLoad/README.md)으로 확장한다.
 
 현재 템플릿에 포함된 Combat / Platforming / SideScrolling 예제 코드를 새로 개발한 네트워크 기능으로 간주하지 않는다. PIE 동작과 패키징된 Dedicated Server 검증도 분리해 기록한다.

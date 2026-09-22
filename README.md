@@ -45,7 +45,7 @@ Artifacts/          # 로컬 트레이스·로그·출력 (Git 제외)
 Builds/             # 패키징 출력 (Git 제외)
 ```
 
-[설계](Docs/Architecture.md) · [측정 결과 작성 규칙](Docs/Results/README.md) · [실험 문서 템플릿](Docs/Experiments/TEMPLATE.md)
+[아키텍처](Docs/Architecture/README.md) · [멀티플레이 기반 검증](Docs/Testing/MultiplayerBaseline.md) · [측정 결과 작성 규칙](Docs/Results/README.md) · [실험 문서 템플릿](Docs/Experiments/TEMPLATE.md)
 
 ## 비용 제약을 고려한 자산 저장 구조
 
