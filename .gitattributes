@@ -2,6 +2,7 @@
 .gitignore text eol=lf
 .gitattributes text eol=lf
 .editorconfig text eol=lf
+.lfsconfig text eol=lf
 *.md text eol=lf
 *.json text eol=lf
 *.ini text eol=lf
