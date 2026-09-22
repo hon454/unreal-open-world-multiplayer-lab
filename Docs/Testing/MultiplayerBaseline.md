@@ -1,6 +1,6 @@
 # 첫 멀티플레이 구현·검증
 
-상태: 미검증. 기준 엔진: UE 5.8.2.
+상태: PIE 2인 접속·스폰 및 양방향 이동·점프 확인. 패키징·EOS는 미검증. 기준 엔진: UE 5.8.2.
 
 순서: Server/Client 타깃·TPP 스폰 준비 → PIE 확인 → 패키징된 2인 접속 → EOS 연동.
 
@@ -27,12 +27,13 @@ PIE 성공은 패키징 검증을 대체하지 않는다. 양방향 이동은 �
 
 ## 사용자 조작 확인
 
-PIE: TPP 맵 → New Editor Window → Play As Client → Number of Players 2.
+PIE: `/Game/Maps/L_MultiplayerTest` → New Editor Window → Play As Client → Number of Players 2.
 프로젝트 기본값보다 기존 에디터 사용자 설정이 우선할 수 있으므로 메뉴에서 확인한다.
 
 1. 두 창에 각각 캐릭터가 생성되고 상대 캐릭터가 보이는지 확인한다.
 2. 각 창에서 번갈아 WASD·마우스·Space를 조작해 상대 창에서도 이동·방향 전환·점프가 보이는지 확인한다.
 3. 별도 프로세스 검증 단계에서는 한 클라이언트의 종료·재접속 중 다른 클라이언트가 계속 플레이 가능한지 확인한다.
 
-스폰이 겹치거나 실패하면 맵의 PlayerStart 배치를 확인한다. 현재 맵 배치는 아직 검증하지 않았다.
+스폰이 겹치거나 실패하면 맵의 PlayerStart 배치를 확인한다. 실험 맵의 스폰 간격과 PIE 2인 스폰을 확인했으며, 2026-09-22 사용자가 양방향 이동·점프 반영을 확인했다.
+[실험 맵 결과](../Results/ExperimentMap.md)
 [현재 준비 결과](../Results/MultiplayerBaselinePreparation.md)
