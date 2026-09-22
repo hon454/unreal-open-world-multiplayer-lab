@@ -24,10 +24,10 @@ Local project -- Git commits / LFS pointers --> GitHub
 
 - Git origin: `https://github.com/hon454/unreal-open-world-multiplayer-lab.git`
 - Gitea: `https://gitea.jeonjihoon.dev/hon454/unreal-open-world-multiplayer-lab-lfs`
-- Gitea 저장소 공개 범위: 비공개 (2026-09-22 UI 확인).
+- Gitea 저장소 공개 범위: 공개 (2026-09-22 전환). 포트폴리오 사용자가 별도 계정 없이 자산을 복원할 수 있다.
 - `.lfsconfig`의 `url`, `pushurl`: 위 Gitea 저장소의 `.git/info/lfs` 주소.
-- 인증 정보는 커밋하지 않는다. 기존 로컬 Git credential helper가 Gitea 인증을 처리한다.
-- 브라우저 로그인만으로 다른 PC의 Git 인증이 완료되는 것은 아니다.
+- 다운로드는 익명 접근을 허용한다. 업로드·수정은 권한 있는 사용자 인증이 필요하며 로컬 Git credential helper를 사용한다. 인증 정보는 커밋하지 않는다.
+- 자산을 업로드할 개발자는 브라우저 로그인과 별도로 로컬 Git 인증을 준비한다.
 - Git remote를 Gitea로 바꾸거나 Content를 별도 Git submodule로 분리하지 않는다.
 
 Gitea 저장소는 LFS API와 객체 저장 용도로 사용하므로 Git 파일 목록이 비어 있어도 정상이다. Gitea LFS 관리 화면과 실제 다운로드로 자산 존재 여부를 확인한다. 서버 설정 파일을 직접 점검하지는 않았고, 실제 LFS 왕복 요청 성공으로 기능을 확인했다.
@@ -50,7 +50,7 @@ Git의 로컬·전역 설정은 `.lfsconfig`보다 우선한다. 검사 스크�
 
 ## 다른 PC에서 복원
 
-Git과 Git LFS를 설치하고 GitHub 및 Gitea에 각각 접근 권한을 준비한다. 아래처럼 최초 checkout의 자동 다운로드를 건너뛰면 목적지를 확인한 뒤 자산을 받을 수 있다.
+Git과 Git LFS를 설치한다. GitHub 코드와 Gitea 자산 저장소는 모두 공개이므로 다운로드에 별도 계정이 필요하지 않다. 아래처럼 최초 checkout의 자동 다운로드를 건너뛰면 목적지를 확인한 뒤 자산을 받을 수 있다.
 
 ```powershell
 $env:GIT_LFS_SKIP_SMUDGE = '1'
@@ -66,7 +66,7 @@ git lfs pull origin
 git lfs fsck
 ```
 
-이후 `OpenWorldMultiLab.uproject`를 연다. Gitea 권한이 없거나 NAS에 연결할 수 없으면 코드와 포인터를 받아도 실제 자산을 복원할 수 없다. GitHub를 공개하더라도 비공개 Gitea 자산의 접근 권한이 자동으로 부여되지는 않는다. 리뷰용 영상·캡처·측정 요약은 GitHub 문서에서 제공하고 실행 검증 대상자에게는 별도의 자산 접근 방법을 마련한다.
+이후 `OpenWorldMultiLab.uproject`를 연다. NAS에 연결할 수 없으면 코드와 포인터를 받아도 실제 자산을 복원할 수 없다. 공개 LFS 다운로드는 NAS의 회선·가용성에 의존한다. 리뷰용 영상·캡처·측정 요약은 GitHub 문서에서도 제공한다.
 
 ## 운영과 한계
 
